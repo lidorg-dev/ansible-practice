@@ -1,0 +1,7 @@
+---
+  - hosts: database
+    become: true # give sudo privleges
+    tasks:
+      - name: install my-sql-server
+        apt: name=mysql-server state=present update_cache=yes
+        
